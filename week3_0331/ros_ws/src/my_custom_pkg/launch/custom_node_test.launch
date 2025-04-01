@@ -1,0 +1,9 @@
+<!-- ~/ros_ws/src/my_custom_pkg/launch/custom_node_test.launch -->
+<launch>
+  <!-- 퍼블리셔 노드 -->
+  <node pkg="my_custom_pkg" type="custom_publisher.py" name="custom_publisher" output="screen" />
+
+  <!-- 서브스크라이버 노드 -->
+  <node pkg="my_custom_pkg" type="custom_subscriber.py" name="custom_subscriber" output="screen" />
+</launch>
+

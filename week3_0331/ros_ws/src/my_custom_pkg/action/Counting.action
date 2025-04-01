@@ -1,0 +1,10 @@
+# CountingAction.action
+# Goal
+int32 max_number
+---
+# Result
+int32[] final_numbers
+string result_message
+---
+# Feedback
+int32[] current_numbers

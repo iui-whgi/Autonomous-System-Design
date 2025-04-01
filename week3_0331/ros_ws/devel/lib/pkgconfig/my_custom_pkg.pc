@@ -1,0 +1,8 @@
+prefix=/home/son/Desktop/ros_ws/devel
+
+Name: my_custom_pkg
+Description: Description of my_custom_pkg
+Version: 0.0.0
+Cflags: -I/home/son/Desktop/ros_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs message_runtime actionlib_msgs
