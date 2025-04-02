@@ -1,6 +1,5 @@
-# CountingAction.action
 # Goal
-int32 max_number
+# 빈 목표 메시지 - max_number는 이제 ROS 파라미터로 관리됨
 ---
 # Result
 int32[] final_numbers

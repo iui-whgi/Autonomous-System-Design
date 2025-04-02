@@ -9,9 +9,13 @@ class CardTrickClient:
         self.client.wait_for_server()
         rospy.loginfo("Connected to Card Trick Server")
         
-    def send_goal(self, max_number):
+    def send_goal(self):
+        # 전역 파라미터에서 max_number 값을 가져오기
+        max_number = rospy.get_param('/card_trick/max_number', 5)
+        rospy.loginfo(f"Using max_number parameter: {max_number}")
+        
+        # 빈 목표 전송
         goal = CountingGoal()
-        goal.max_number = max_number
         
         # 피드백 콜백 함수 등록
         self.client.send_goal(goal, feedback_cb=self.feedback_callback)
@@ -28,12 +32,9 @@ class CardTrickClient:
 
 if __name__ == '__main__':
     rospy.init_node('card_trick_client')
+    
     client = CardTrickClient()
-    
-    # 사용자 입력으로 최대 숫자 설정
-    max_number = int(input("Enter the maximum number of cards (max 50): "))
-    
-    result = client.send_goal(max_number)
+    result = client.send_goal()
     
     rospy.loginfo(f"Final unique numbers: {result.final_numbers}")
     rospy.loginfo(f"Server result message: {result.result_message}")
