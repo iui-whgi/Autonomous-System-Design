@@ -17,24 +17,33 @@ class CardTrickServer:
         # 최대 숫자 검증 (요구사항에 따라 50 이하여야 함)
         max_number = min(goal.max_number, 50)
         
-        feedback.current_numbers = []
+        # 서버에서 중복 체크를 위한 리스트
+        unique_numbers = []
         
         # 요청된 개수만큼 랜덤 숫자 생성
         for i in range(max_number):
-            # 1~10 사이의 랜덤 숫자성
-            random_number = random.randint(1, 5)
+            # 1~5 사이의 랜덤 숫자 생성
+            random_number = random.randint(1, 50)
             
-            # 서버에서 중복 검사를 하지 않고 클라이언트로 모든 숫자를 전송
-            # 클라이언트에서 중복 처리 하도록 변경
-            feedback.current_numbers.append(random_number)
+            # 서버에서 중복 검사 처리
+            if random_number not in unique_numbers:
+                # 중복이 아닌 경우만 unique_numbers에 추가
+                unique_numbers.append(random_number)
+                rospy.loginfo(f"Generated unique number: {random_number}")
+                rospy.loginfo(f"Current unique numbers: {unique_numbers}")
+            else:
+                rospy.logwarn(f"Duplicate number generated: {random_number}, not adding to list")
+            
+            # 피드백은 매번 현재까지의 고유한 숫자 목록을 포함
+            feedback.current_numbers = unique_numbers.copy()
             
             # 피드백 전송
             self.server.publish_feedback(feedback)
             rospy.sleep(1)  # 1초 대기
         
         # 결과 설정
-        result.final_numbers = feedback.current_numbers
-        result.result_message = f"Successfully generated {max_number} random numbers"
+        result.final_numbers = unique_numbers
+        result.result_message = f"Generated {max_number} random numbers, with {len(unique_numbers)} unique numbers"
         
         self.server.set_succeeded(result)
         rospy.loginfo("Goal completed")
