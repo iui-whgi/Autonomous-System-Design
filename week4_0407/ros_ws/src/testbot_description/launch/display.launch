@@ -1,0 +1,17 @@
+<launch>
+  <!-- URDF를 파라미터로 로드 -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find testbot_description)/urdf/testbot.urdf" />
+
+  <!-- 로봇의 링크 정보(TF) 퍼블리시 -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- 기본 관절 상태 퍼블리셔 (수동 슬라이더 GUI 포함) -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+
+  <!-- RViz 실행 -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find testbot_description)/rviz/testbot.rviz" required="true" />
+</launch>
+
