@@ -29,11 +29,7 @@ rostopic echo -b my_turtle_velocity.bag -p /turtle1/cmd_vel > output.csv
 
 가제보 초기화 
 
-```
-killall gzserver
-killall gzclient
-roslaunch turtlebot3_gazebo turtlebot3_world.launch
-```
+
 
 
 
@@ -47,17 +43,9 @@ rostopic echo -b your_file.bag -p /turtle1/pose | grep position
 
 
 
-rosbag record -O turtlebot_movement.bag /odom
-rostopic echo -b turtlebot_movement.bag -p /turtle1/odm > turtlebot_mov
-ement4.csv
-rostopic echo -b turtlebot_movement3.bag -p /odom > turtlebot_movement3.csv
 
 
 
-
-
-
-turtlebot_movement2.csv에저장함
 
 
 
@@ -69,3 +57,22 @@ turtlebot_movement2.csv에저장함
 
  field.pose.pose.position.x,field.pose.pose.position.y
  이두개 답이있따.
+
+
+
+
+ # Empty world 0430 
+
+ ```
+ killall gzserver
+ killall gzclient
+ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+
+ ```
+
+```
+rosbag record -O turtlebot_movement.bag /odom
+rostopic echo -b turtlebot_movement.bag -p /turtle1/odm > turtlebot_movement4.csv
+rostopic echo -b turtlebot_movement3.bag -p /odom > turtlebot_movement3.csv
+
+```

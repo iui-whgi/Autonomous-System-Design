@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "my_custom_pkg"
-PROJECT_SPACE_DIR = "/home/son/Desktop/ros_ws/devel"
+PROJECT_SPACE_DIR = "/home/son/Desktop/week5_0414/ros_ws/devel"
 PROJECT_VERSION = "0.0.0"

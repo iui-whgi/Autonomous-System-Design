@@ -1,4 +1,4 @@
-prefix=/home/son/Desktop/ros_ws/devel
+prefix=/home/son/Desktop/week5_0414/ros_ws/devel
 
 Name: my_custom_pkg
 Description: Description of my_custom_pkg

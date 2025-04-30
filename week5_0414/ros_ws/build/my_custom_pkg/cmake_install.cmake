@@ -1,8 +1,8 @@
-# Install script for directory: /home/son/Desktop/ros_ws/src/my_custom_pkg
+# Install script for directory: /home/son/Desktop/week5_0414/ros_ws/src/my_custom_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/son/Desktop/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/son/Desktop/week5_0414/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/son/Desktop/ros_ws/build/my_custom_pkg/catkin_generated/installspace/my_custom_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg/catkin_generated/installspace/my_custom_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_custom_pkg/cmake" TYPE FILE FILES
-    "/home/son/Desktop/ros_ws/build/my_custom_pkg/catkin_generated/installspace/my_custom_pkgConfig.cmake"
-    "/home/son/Desktop/ros_ws/build/my_custom_pkg/catkin_generated/installspace/my_custom_pkgConfig-version.cmake"
+    "/home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg/catkin_generated/installspace/my_custom_pkgConfig.cmake"
+    "/home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg/catkin_generated/installspace/my_custom_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_custom_pkg" TYPE FILE FILES "/home/son/Desktop/ros_ws/src/my_custom_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_custom_pkg" TYPE FILE FILES "/home/son/Desktop/week5_0414/ros_ws/src/my_custom_pkg/package.xml")
 endif()
 

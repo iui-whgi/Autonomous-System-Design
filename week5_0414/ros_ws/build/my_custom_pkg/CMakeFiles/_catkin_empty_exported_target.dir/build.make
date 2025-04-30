@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/son/Desktop/ros_ws/src
+CMAKE_SOURCE_DIR = /home/son/Desktop/week5_0414/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/son/Desktop/ros_ws/build
+CMAKE_BINARY_DIR = /home/son/Desktop/week5_0414/ros_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_
 .PHONY : my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/son/Desktop/ros_ws/build/my_custom_pkg && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/son/Desktop/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/son/Desktop/ros_ws/src /home/son/Desktop/ros_ws/src/my_custom_pkg /home/son/Desktop/ros_ws/build /home/son/Desktop/ros_ws/build/my_custom_pkg /home/son/Desktop/ros_ws/build/my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/son/Desktop/week5_0414/ros_ws/src /home/son/Desktop/week5_0414/ros_ws/src/my_custom_pkg /home/son/Desktop/week5_0414/ros_ws/build /home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg /home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

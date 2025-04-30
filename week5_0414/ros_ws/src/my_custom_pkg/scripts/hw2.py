@@ -24,7 +24,7 @@ class TurtleBot3GoalController:
         
         # 목표 좌표 설정 (여기서 원하는 좌표로 변경 가능)
         self.goal_x = 1.0  # 목표 x 좌표
-        self.goal_y = 1.6  # 목표 y 좌표
+        self.goal_y = 0  # 목표 y 좌표
         
         # 제어 파라미터
         self.linear_speed = 0.2      # 선속도 (m/s)

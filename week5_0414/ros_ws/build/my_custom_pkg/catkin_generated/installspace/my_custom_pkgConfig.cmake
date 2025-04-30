@@ -67,14 +67,14 @@ set(my_custom_pkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(my_custom_pkg_SOURCE_PREFIX /home/son/Desktop/ros_ws/src/my_custom_pkg)
-  set(my_custom_pkg_DEVEL_PREFIX /home/son/Desktop/ros_ws/devel)
+  set(my_custom_pkg_SOURCE_PREFIX /home/son/Desktop/week5_0414/ros_ws/src/my_custom_pkg)
+  set(my_custom_pkg_DEVEL_PREFIX /home/son/Desktop/week5_0414/ros_ws/devel)
   set(my_custom_pkg_INSTALL_PREFIX "")
   set(my_custom_pkg_PREFIX ${my_custom_pkg_DEVEL_PREFIX})
 else()
   set(my_custom_pkg_SOURCE_PREFIX "")
   set(my_custom_pkg_DEVEL_PREFIX "")
-  set(my_custom_pkg_INSTALL_PREFIX /home/son/Desktop/ros_ws/install)
+  set(my_custom_pkg_INSTALL_PREFIX /home/son/Desktop/week5_0414/ros_ws/install)
   set(my_custom_pkg_PREFIX ${my_custom_pkg_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/son/Desktop/ros_ws/install/lib;/home/son/Desktop/ros_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/son/Desktop/week5_0414/ros_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

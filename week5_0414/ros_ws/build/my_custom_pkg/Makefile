@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/son/Desktop/ros_ws/src
+CMAKE_SOURCE_DIR = /home/son/Desktop/week5_0414/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/son/Desktop/ros_ws/build
+CMAKE_BINARY_DIR = /home/son/Desktop/week5_0414/ros_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/son/Desktop/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/son/Desktop/ros_ws/build/CMakeFiles /home/son/Desktop/ros_ws/build/my_custom_pkg/CMakeFiles/progress.marks
-	cd /home/son/Desktop/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/son/Desktop/ros_ws/build/CMakeFiles 0
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/son/Desktop/week5_0414/ros_ws/build/CMakeFiles /home/son/Desktop/week5_0414/ros_ws/build/my_custom_pkg/CMakeFiles/progress.marks
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/son/Desktop/week5_0414/ros_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/son/Desktop/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/clean
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/son/Desktop/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/preinstall
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/son/Desktop/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/preinstall
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/son/Desktop/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/son/Desktop/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ _catkin_empty_exported_target: my_custom_pkg/CMakeFiles/_catkin_empty_exported_t
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/son/Desktop/ros_ws/build && $(MAKE) -f my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(MAKE) -f my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make my_custom_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -207,6 +207,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/son/Desktop/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/son/Desktop/week5_0414/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

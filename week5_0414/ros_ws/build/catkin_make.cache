@@ -1,2 +1,2 @@
 my_custom_pkg
--DCATKIN_DEVEL_PREFIX=/home/son/Desktop/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/son/Desktop/ros_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/son/Desktop/week5_0414/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/son/Desktop/week5_0414/ros_ws/install -G Unix Makefiles
