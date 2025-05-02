@@ -7,8 +7,8 @@ from time import time
 from tf.transformations import euler_from_quaternion
 
 # 목표 위치 설정
-goal_x = -1.0  # Gazebo에서의 적절한 값으로 조정
-goal_y = 0.0  # Gazebo에서의 적절한 값으로 조정
+goal_x = 1  # Gazebo에서의 적절한 값으로 조정
+goal_y = 1  # Gazebo에서의 적절한 값으로 조정
 
 class GoToGoalController:
     def __init__(self):
@@ -63,7 +63,7 @@ class GoToGoalController:
             # --- PID: distance ---
             self.integral_distance += distance * dt
             d_distance = (distance - self.prev_distance_error) / dt if dt > 0 else 0.0
-            vx = 0.5 * distance + 0.02 * self.integral_distance + 0.02 * d_distance  # Gazebo에 맞게 게인 조정
+            vx = 30 * distance + 0.1 * self.integral_distance + 0.1 * d_distance  # Gazebo에 맞게 게인 조정
             self.prev_distance_error = distance
 
             # --- PID: angle ---
